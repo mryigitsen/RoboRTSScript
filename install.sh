@@ -109,6 +109,7 @@ echo "[Setting up RoboRTS]"
 cd ~/$name_catkinws
 catkin_make messages_generate_messages
 catkin_make
+echo "[RoboRTS Installation Complete!!!]"
 
 exec bash
 
