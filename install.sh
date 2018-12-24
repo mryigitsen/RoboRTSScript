@@ -97,8 +97,8 @@ echo "[ROS Installation Complete!!!]"
 
 echo "[Installing dependencies for RoboRTS]"
 
-sudo apt install git vim openssh-client openssh-server build-essential cutecom lrzsz
-sudo apt-get install ros-kinetic-opencv3 ros-kinetic-cv-bridge ros-kinetic-image-transport ros-kinetic-stage-ros ros-kinetic-map-server ros-kinetic-laser-geometry ros-kinetic-interactive-markers ros-kinetic-tf ros-kinetic-pcl-* ros-kinetic-libg2o protobuf-compiler libprotobuf-dev libsuitesparse-dev libgoogle-glog-dev ros-kinetic-rviz
+sudo apt install -y git vim openssh-client openssh-server build-essential cutecom lrzsz
+sudo apt-get install -y ros-kinetic-opencv3 ros-kinetic-cv-bridge ros-kinetic-image-transport ros-kinetic-stage-ros ros-kinetic-map-server ros-kinetic-laser-geometry ros-kinetic-interactive-markers ros-kinetic-tf ros-kinetic-pcl-* ros-kinetic-libg2o protobuf-compiler libprotobuf-dev libsuitesparse-dev libgoogle-glog-dev ros-kinetic-rviz
 
 echo "[Installing RoboRTS]"
 cd ~/$name_catkinws/src
