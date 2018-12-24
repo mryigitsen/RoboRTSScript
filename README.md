@@ -1,4 +1,4 @@
-# RoboRTSScript
+# RoboRTS Installation Script
 A script to install ROS Kinetic Desktop and RoboRTS from DJI on a clean installation. Might be useful if you need to set up multiple enviroments at the same time. 
 
 ## How to use?
