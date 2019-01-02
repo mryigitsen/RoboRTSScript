@@ -8,7 +8,7 @@ function usage {
 }
 
 # Parse command line. If the number of argument differs from what is expected, call `usage` function.
-OPT=`getopt -o h -l help -- $*`
+OPT=$(getopt -o h -l help -- $*)
 if [ $# != 2 ]; then
     usage
 fi
@@ -26,7 +26,7 @@ name_catkinws=${name_catkinws:="catkin_ws"}
 name_ros_distro=$2
 name_ros_distro=${name_ros_distro:="kinetic"}
 
-version=`lsb_release -sc`
+version=$(lsb_release -sc)
 
 echo "[Checking the ubuntu version]"
 case $version in
@@ -42,7 +42,7 @@ sudo apt-get update
 sudo apt-get upgrade
 
 echo "[Check the 14.04.2 TLS issue]"
-relesenum=`grep DISTRIB_DESCRIPTION /etc/*-release | awk -F 'Ubuntu ' '{print $2}' | awk -F ' LTS' '{print $1}'`
+relesenum=$(grep DISTRIB_DESCRIPTION /etc/*-release | awk -F 'Ubuntu ' '{print $2}' | awk -F ' LTS' '{print $1})
 if [ "$relesenum" = "14.04.2" ]
 then
   echo "Your ubuntu version is $relesenum"
@@ -62,7 +62,7 @@ if [ ! -e /etc/apt/sources.list.d/ros-latest.list ]; then
 fi
 
 echo "[Download the ROS keys]"
-roskey=`apt-key list | grep "ROS builder"`
+roskey=$(apt-key list | grep "ROS builder")
 if [ -z "$roskey" ]; then
   wget --quiet https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - | sudo apt-key add -
 fi
